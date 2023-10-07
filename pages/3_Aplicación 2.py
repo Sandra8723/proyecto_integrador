@@ -1,25 +1,26 @@
 import streamlit as st
-import platform
+import math
 
 # Diseño personalizado
 st.header("Aplicación 2")
 
-def main():
-    st.title ("Información del sistema")
+result = st.header("");
+
+def calcular_raiz_cuadrada(numero):
+    return math.sqrt(numero)
+
+
+st.title("Calculadora de Raíz Cuadrada")
+numero = st.number_input("Ingresa un número para calcular su raíz cuadrada:")
+
+
+if st.button("Calcular"):
+    resultado = calcular_raiz_cuadrada(numero)
+    st.write(f"La raíz cuadrada de {numero} es {resultado}")
+    resultado = calcular_raiz_cuadrada(numero)
+    result.text(resultado)
     
-    system_info = platform.uname()
+    
 
-    st.write("Sistema operativo:", 
-    system_info.system), 
-    system_info = platform.uname(),
-    system_info = platform.un
-    system_info = platform
-    system_info = system_info
    
-    st.write("Versión:", system_info.version)
-    st.write("Nombre del nodo:", system_info.node)
-    st.write("Arquitectura:", system_info.machine)
-    st.write("Procesador:", system_info.processor)
 
-if __name__ == "__main__":
-    main()
